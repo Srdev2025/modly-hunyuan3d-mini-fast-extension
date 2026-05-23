@@ -2,9 +2,9 @@
   "id": "hunyuan3d-mini-fast",
   "name": "Hunyuan3D 2 Mini Fast",
   "type": "model",
-  "source": "https://github.com/lightningpixel/modly-hunyuan3d-mini-fast-extension",
-  "description": "Distilled fast variant of Hunyuan3D 2 Mini. Same quality at 5–10 steps instead of 30.",
-  "version": "1.0.0",
+  "source": "https://github.com/Srdev2025/modly-hunyuan3d-full",
+  "description": "Distilled fast variant of Hunyuan3D 2 Mini with PBR texture generation using Hunyuan3D-Paint v2.1.",
+  "version": "1.1.0",
   "author": "Lightning Pixel",
   "generator_class": "Hunyuan3DMiniFastGenerator",
   "tags": ["image-to-3d", "fast", "low-vram"],
@@ -29,7 +29,7 @@
           "type": "select",
           "default": 10,
           "options": [
-            { "value": 5,  "label": "Fast" },
+            { "value": 5, "label": "Fast" },
             { "value": 10, "label": "Balanced" },
             { "value": 20, "label": "High" }
           ],
@@ -45,7 +45,7 @@
             { "value": 380, "label": "Medium" },
             { "value": 512, "label": "High" }
           ],
-          "tooltip": "Octree resolution for mesh reconstruction. Higher = more detail but slower and more VRAM."
+          "tooltip": "Octree resolution for mesh reconstruction."
         },
         {
           "id": "guidance_scale",
@@ -55,7 +55,7 @@
           "min": 1.0,
           "max": 10.0,
           "step": 0.5,
-          "tooltip": "Classifier-free guidance strength. Higher = closer to the input image."
+          "tooltip": "Classifier-free guidance strength."
         },
         {
           "id": "seed",
@@ -64,7 +64,26 @@
           "default": -1,
           "min": -1,
           "max": 4294967295,
-          "tooltip": "Seed for reproducibility. Set to -1 for a random seed."
+          "tooltip": "Set to -1 for random seed."
+        },
+        {
+          "id": "enable_texture",
+          "label": "Enable Texture (PBR)",
+          "type": "bool",
+          "default": false,
+          "tooltip": "Generate PBR textures using Hunyuan3D-Paint v2.1. Requires extra VRAM and downloads ~7 GB on first use."
+        },
+        {
+          "id": "texture_resolution",
+          "label": "Texture Resolution",
+          "type": "select",
+          "default": 1024,
+          "options": [
+            { "value": 512, "label": "512" },
+            { "value": 1024, "label": "1024" },
+            { "value": 2048, "label": "2048" }
+          ],
+          "tooltip": "Resolution of the generated PBR texture maps."
         }
       ]
     }
