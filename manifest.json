@@ -2,7 +2,7 @@
   "id": "hunyuan3d-mini-fast",
   "name": "Hunyuan3D 2 Mini Fast",
   "type": "model",
-  "source": "https://github.com/Srdev2025/modly-hunyuan3d-full",
+  "source": "https://github.com/Srdev2025/modly-hunyuan3d-mini-fast-extension",
   "description": "Distilled fast variant of Hunyuan3D 2 Mini with PBR texture generation using Hunyuan3D-Paint v2.1.",
   "version": "1.1.0",
   "author": "Lightning Pixel",
@@ -33,7 +33,7 @@
             { "value": 10, "label": "Balanced" },
             { "value": 20, "label": "High" }
           ],
-          "tooltip": "Number of diffusion steps. More steps = better quality but slower."
+          "tooltip": "Number of diffusion steps."
         },
         {
           "id": "octree_resolution",
@@ -54,8 +54,7 @@
           "default": 5.5,
           "min": 1.0,
           "max": 10.0,
-          "step": 0.5,
-          "tooltip": "Classifier-free guidance strength."
+          "step": 0.5
         },
         {
           "id": "seed",
@@ -63,15 +62,14 @@
           "type": "int",
           "default": -1,
           "min": -1,
-          "max": 4294967295,
-          "tooltip": "Set to -1 for random seed."
+          "max": 4294967295
         },
         {
           "id": "enable_texture",
           "label": "Enable Texture (PBR)",
-          "type": "bool",
+          "type": "checkbox",
           "default": false,
-          "tooltip": "Generate PBR textures using Hunyuan3D-Paint v2.1. Requires extra VRAM and downloads ~7 GB on first use."
+          "tooltip": "Generate PBR textures with Hunyuan3D-Paint v2.1."
         },
         {
           "id": "texture_resolution",
@@ -82,8 +80,7 @@
             { "value": 512, "label": "512" },
             { "value": 1024, "label": "1024" },
             { "value": 2048, "label": "2048" }
-          ],
-          "tooltip": "Resolution of the generated PBR texture maps."
+          ]
         }
       ]
     }
