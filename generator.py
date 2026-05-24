@@ -22,7 +22,7 @@ _HF_REPO_ID      = "tencent/Hunyuan3D-2mini"
 _SUBFOLDER       = "hunyuan3d-dit-v2-mini-fast"
 _GITHUB_ZIP      = "https://github.com/Tencent/Hunyuan3D-2/archive/refs/heads/main.zip"
 _PAINT_HF_REPO   = "tencent/Hunyuan3D-2"
-_PAINT_SUBFOLDER = "hunyuan3d-paint-v2-0-turbo"
+_PAINT_SUBFOLDER = "hunyuan3d-paint-v2-0"
 
 
 class Hunyuan3DMiniFastGenerator(BaseGenerator):
